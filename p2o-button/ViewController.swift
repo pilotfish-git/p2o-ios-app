@@ -17,14 +17,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        socket.on("connect") {data in
-            print("socket connected")
-        }
-        
-        socket.on("connection-response") {data in
-            print("socket connected")
-        }
         
         socket.on("connection-response") {data in
             self.socket.emit("register", "test")
