@@ -3,7 +3,19 @@
 The Pilotfish P2O server uses a web socket connection to be able to notify clients realtime on 'button presses'.
 To setup the web socket connection, this project uses the [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) library.
 
-The Pilotfish websocket API is pretty simple. When having connected with `socket.connect()` you will be able to listen
+The Pilotfish websocket endpoint runs at `http://p2o.pilotfish-demo-portal.eu:3001`. You can prepare your connection with:
+
+```swift
+let socket = SocketIOClient(socketURL: NSURL(string:"http://p2o.pilotfish-demo-portal.eu:3001")!)
+```
+
+and then connect with:
+
+```swift
+socket.connect()
+```
+
+The Pilotfish websocket API is pretty simple. When having connected you will be able to listen
 for the following responses:
 
 ```swift
