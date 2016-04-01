@@ -34,7 +34,7 @@ socket.on("register-response", {data in
 }
 ```
 
-After emitting the `register` message, the server will respond with `register-response` with in its data:
+After emitting the `register` message, the server will respond with `register-response` with the following in its payload:
 *   `status` (string): will be either `success` or `failed`
 *   `button` (object, optional): if a button object is send, it means there is already a button registered on the server
 with this id. The button object will contain the following properties:
