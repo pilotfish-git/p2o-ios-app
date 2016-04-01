@@ -1,5 +1,8 @@
 # p2o-ios-app
 
+This is a very basic IOS app that connects to the Pilotfish P2O server, and can be used as a boilerplate to
+create your own.
+
 The Pilotfish P2O server uses a web socket connection to be able to notify clients realtime on 'button presses'.
 To setup the web socket connection, this project uses the [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) library.
 
@@ -24,7 +27,7 @@ socket.on("connection-response") {data in
 }
 ```
 
-After you connect to the server with `socket.connect()`, the server will respond with `connection response`.
+After you connect to the server, the server will respond with `connection response`.
 The data from the response contains a `status` property, that can be `success` or `failed`. if the `data.status`
 property is `success`, you need to emit a `register` message, with the button id as payload (in this case `test`).
 
