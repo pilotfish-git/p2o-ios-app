@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let socket = SocketIOClient(socketURL: NSURL(string:"http://p2o.pilotfish-demo-portal.eu:3001")!)
+    let socket = SocketIOClient(socketURL: NSURL(string:"http://pilotfish-demo-portal.eu:3001")!)
     @IBOutlet weak var counterLabel: UILabel!
     var counter = 0
     
